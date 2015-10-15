@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8" />
+    <title>Hello</title>
+    <link type="text/css" rel="stylesheet"
+          href="{{ url_for('static',
+               filename='hello.css')}}" />
+</head>
+<body>
+<h1>
+      {% if success %}
+      User id {{username}} created for email address {{emailAddress}}. {{emailSuccessMessage}}
+      {% else %}
+      Creation failed for {{ username }} with email address {{emailAddress}} because {{ message }}
+      {% endif %}
+</h1>
+
+</body>
+</html>
